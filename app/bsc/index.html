@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Payable</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+    <style media="screen">
+      body {
+        padding-top: 5rem;
+      }
+      .starter-template {
+        padding: 3rem 1.5rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/smart-chain.png" alt="">
+        Smart Chain
+      </a>
+    </nav>
+
+      <section>
+        </div>
+        <div class="col-12">
+          <div class="row">
+            <div class="col text-left">
+              <button class="btn btn-danger my-2 my-sm-0 d-none" id=disconnected>
+                <img src="images/disconnect.png" alt="">
+                Disconnected
+              </button>
+              <button class="btn btn-success my-2 my-sm-0 d-none" id="connected" disabled>
+                <img src="images/connect.png" alt="">
+                Connected
+              </button>
+              <button class="btn btn-success my-2 my-sm-0 d-none" id="no-web3" disabled>
+                <img src="images/connect.png" alt="">
+                Metamask Undetected
+              </button>
+            </div>
+
+            <div class="col text-right">
+              <button class="btn btn-outline-primary my-2 my-sm-0" id="balance" disabled>
+                0.0000 BNB
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="col-12 mt-3 visitor d-none">
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <form id="deposit-form">
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="deposit-amount" required placeholder="0.0">
+                  <div id="bnb-help" class="form-text text-danger"><small>Deposit some bnb to this contract</small></div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm deposit">Deposit</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="col-12 mt-3 owner d-none">
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <form id="partial-withdrawal-form">
+                <div class="mb-3">
+                  <input type="text" class="form-control total" id="withdraw-some-amount" value="">
+                  <div id="bnb-help" class="form-text text-danger"><small>Perform partial withdrawal</small></div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm withdraw-some-btn">Withdraw</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="col-12 mt-3 owner d-none">
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <form id="full-withdrawal-form">
+                <div class="mb-3">
+                  <input type="text" class="form-control total" id="bnb" readonly value="0.0">
+                  <div id="bnb-help" class="form-text text-danger"><small>Withdraw all available balance</small></div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm withdraw-all-btn">Withdraw</button>
+              </form>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="col-12">
+          <div class="row">
+          <div class="col-12">
+            <a href="https://bscscan.com/address/0x04e5ab7bd2d31f24b3c304dc7c3c2656a124946e"  target="_blank" style="cursor:pointer">
+              <small>Contract: 0x04e5ab7bd2d31f24b3c304dc7c3c2656a124946e</small>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="application/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/bsc-connect.js" type="application/javascript"></script>
+  </body>
+</html>
